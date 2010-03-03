@@ -22,19 +22,19 @@ bin/dotfile_install.sh dot-bashrc
 bin/dotfile_install.sh dot-emacs
 
 # mc
-bin/dotfile_install.sh dot-mc                   # directory
+#bin/dotfile_install.sh dot-mc                   # directory
 
 # mutt
-bin/dotfile_install.sh dot-muttrc
+#bin/dotfile_install.sh dot-muttrc
 
 # nethack
 bin/dotfile_install.sh dot-nethackrc
 
 # openbox
-bin/dotfile_install.sh dot-openbox              # directory
+#bin/dotfile_install.sh dot-openbox              # directory
 
 # wget
 bin/dotfile_install.sh dot-wgetrc
 
 # X11
-bin/dotfile_install.sh dot-Xdefaults
+#bin/dotfile_install.sh dot-Xdefaults
