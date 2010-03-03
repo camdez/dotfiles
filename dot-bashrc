@@ -14,14 +14,21 @@ if [ -z "$PS1" ]; then
 fi
 
 # Aliases
-alias e='emacsclient'
-#eval `dircolors -b`
-#alias ls='ls --color=auto'
-alias ls='ls -G'                              # colorize `ls` output (Mac version)
+case `uname -s` in
+    Darwin|*BSD*)
+        alias ls='ls -G'                      # colorize `ls` output (BSD/Mac version)
+        ;;
+    *)
+        eval `dircolors -b`                   # colorize `ls` output (GNU version)
+        alias ls='ls --color=auto'
+        ;;
+esac
+
 alias lsd='ls -F | grep \/ | sort'            # list only dirs, alphabetically
 alias rmb='rm *~'                             # remove emacs backup files
 alias rmbr="find . -name '*~' -exec rm {} \;" # recursive version of above
 alias ssh='ssh -C'                            # enable compression
+alias e='emacsclient'
 
 # Configure Colors:
 export COLOR_WHITE='\033[1;37m'
@@ -52,7 +59,7 @@ function __make_prompt() {
 
     # Only set these colors if we are on a color terminal
     case $TERM in
-        xterm-color|rxvt)
+        xterm*|rxvt)
             local PROMPT_COLOR=$COLOR_GREEN
             local CLEAR_COLOR=$COLOR_DEFAULT
             ;;
