@@ -1,0 +1,3 @@
+# .wgetrc                                                     -*- mode: sh; -*-
+robots = off
+user-agent = "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.7.6) Gecko/20050512 Firefox"

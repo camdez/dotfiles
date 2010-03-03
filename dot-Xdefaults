@@ -1,0 +1,54 @@
+xterm*foreground: #ffffff
+xterm*background: #000000
+
+! black
+xterm*color0:  #000000
+xterm*color8:  #737373
+
+! red
+xterm*color1:  #d04c63
+xterm*color9:  #cf8187
+
+! green
+xterm*color2:  #8ebc48
+xterm*color10: #a8c599
+
+! yellow
+xterm*color3:  #f4a45f
+xterm*color11: #fff796
+
+! blue
+xterm*color4:  #344863
+xterm*color12: #7292ad
+
+! magenta
+xterm*color5:  #940a78
+xterm*color13: #a96993
+
+! cyan
+xterm*color6:  #0b94a0
+xterm*color14: #96cccc
+
+! white
+xterm*color7:  gray
+xterm*color15: white
+
+xterm*metaSendsEscape: true
+
+
+gnuplot*background: black
+gnuplot*textColor: white
+gnuplot*borderColor: white
+gnuplot*axisColor: white
+
+
+XClock*background: black
+XClock*Clock*hourColor: white
+XClock*Clock*minuteColor: white
+XClock*Clock*secondColor: white
+XClock*Clock*majorColor: white
+XClock*Clock*minorColor: white
+
+
+Emacs*Background: black
+Emacs*Foreground: white

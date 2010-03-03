@@ -1,0 +1,78 @@
+# -*- mode: sh; -*-
+
+set realname="Cameron Desautels"
+set from=""
+set use_from=yes
+
+#set nomark_old
+set ascii_chars=yes
+set reverse_alias
+set delete=yes                 # Don't ask for confirmation on deletes
+set folder=$HOME/Mail           # Where mail storage folders are
+set mbox_type=Maildir           # Type of folders mutt should create
+set spoolfile=$HOME/Mail/main   # Where incoming mail is found
+set fast_reply                          # do not ask for to, subject,... when replying.
+set copy=yes                            # Do save sent messages
+set fcc_clear
+set record=$HOME/Mail/sent              # Where to save sent messages
+set postponed=$HOME/Mail/drafts         # Where to save postponed messages
+set move=no                            # Don't ask me if I want to move my mail!!
+set mbox=$HOME/Mail/main/
+set include=yes                         # Include email body when replying
+set editor="emacs -nw %s"
+set confirmappend=no
+
+#set sort=reverse-date-received
+set sort=threads
+
+# Signature related options
+set sig_dashes=yes                      # Display --\n before sig             
+#set signature=$HOME/.signature
+set signature="signify |"
+
+set pgp_sign_as="2C31F3E5"
+
+# Display formats
+set folder_format="%2C %t %N %8s  %d  %f"
+
+# Ignore some crappy headers
+ignore *
+unignore From Date Subject To Cc
+hdr_order From: Date: To: CC: Subject:
+
+mailboxes ! +lj +netflix +ebay `echo $HOME/Mail/lists/*`  # check these for mail
+
+macro index x "<save-message>=spam<enter>y" "Take spam-dealing actions"
+macro pager x "<save-message>=spam<enter>y" "Take spam-dealing actions"
+
+
+color normal white default
+color attachment brightyellow default
+color tilde blue default
+color markers brightred default
+color tree red default
+
+color hdrdefault red default
+color quoted green default
+color quoted1 cyan default
+color quoted2 red default
+color quoted3 yellow default
+color quoted4 green default
+
+color signature red default
+color status white red
+color indicator black yellow
+
+color index brightwhite default ~N # New
+color index yellow default ~O # Unread but not new
+#color index blue default '~h "X-Spam-Status:.*score=[1-9]\."'
+color index brightblack default ~D # deleted
+color index green default ~F       # flagged
+color index blue default ~T        # tagged
+color index cyan default ~P     # from me
+
+set pager_index_lines=5
+
+source $HOME/.mutt/aliases
+set alias_file=$HOME/.mutt/aliases
+source $HOME/.mutt/gpg.rc
