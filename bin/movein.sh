@@ -21,6 +21,10 @@ bin/dotfile_install.sh dot-bashrc
 # emacs
 bin/dotfile_install.sh dot-emacs
 
+# git
+bin/dotfile_install.sh dot-gitconfig
+bin/dotfile_install.sh dot-gitignore
+
 # mc
 #bin/dotfile_install.sh dot-mc                   # directory
 
