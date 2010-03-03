@@ -1,7 +1,4 @@
-# -*- mode: sh; -*-
-
-# .bashrc
-# This file is sourced by bash to create the prompt
+# ~/.bashrc: executed by bash(1) for non-login shells.
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -9,9 +6,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # Exit if this is not an interactive shell
-if [ -z "$PS1" ]; then
-    return
-fi
+[ -z "$PS1" ] && return
 
 # Aliases
 case `uname -s` in

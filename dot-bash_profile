@@ -1,5 +1,4 @@
-# -*- mode: sh; -*-
-# This file is read each time a login shell is started.
+# ~/.bash_profile: executed by bash(1) each time a login shell is started.
 
 # include system-wide .profile if it exists
 if [ -f /etc/profile ]; then
