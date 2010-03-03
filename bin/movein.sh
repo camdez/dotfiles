@@ -25,20 +25,11 @@ bin/dotfile_install.sh dot-emacs
 bin/dotfile_install.sh dot-gitconfig
 bin/dotfile_install.sh dot-gitignore
 
-# mc
-#bin/dotfile_install.sh dot-mc                   # directory
-
-# mutt
-#bin/dotfile_install.sh dot-muttrc
-
 # nethack
 bin/dotfile_install.sh dot-nethackrc
-
-# openbox
-#bin/dotfile_install.sh dot-openbox              # directory
 
 # wget
 bin/dotfile_install.sh dot-wgetrc
 
 # X11
-#bin/dotfile_install.sh dot-Xdefaults
+bin/dotfile_install.sh dot-Xdefaults
