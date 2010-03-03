@@ -19,7 +19,7 @@ bin/dotfile_install.sh dot-bash_profile         # a basic dotfile installation
 bin/dotfile_install.sh dot-bashrc
 
 # emacs
-bin/dotfile_install.sh dot-emacs
+bin/dotfile_install.sh dot-emacs.d
 
 # git
 bin/dotfile_install.sh dot-gitconfig
