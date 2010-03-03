@@ -50,10 +50,16 @@ function __make_prompt() {
     # This has to come first
     local RET=$?
 
-    local PROMPT_COLOR=$COLOR_GREEN
+    # Only set these colors if we are on a color terminal
+    case $TERM in
+        xterm-color|rxvt)
+            local PROMPT_COLOR=$COLOR_GREEN
+            local CLEAR_COLOR=$COLOR_DEFAULT
+            ;;
+    esac
 
     if [ $RET -ne 0 ]; then
-        local FACE_PART="${COLOR_RED}:(${COLOR_DEFAULT}\n"
+        local FACE_PART="${COLOR_RED}:(${CLEAR_COLOR}\n"
     fi
 
     if [ $USER != $__NORMAL_USER ]; then
@@ -70,7 +76,7 @@ function __make_prompt() {
 
     # Non-printing chars must be surrounded by \[ and \] to tell bash that
     # they don't take up any space.  Otherwise wrapping will be whacked.
-    PS1="${FACE_PART}\[${PROMPT_COLOR}\][${PROMPT_USER_PART}${PROMPT_HOST_PART}${OPTIONAL_SPACE}\W]\[${COLOR_DEFAULT}\] "
+    PS1="${FACE_PART}\[${PROMPT_COLOR}\][${PROMPT_USER_PART}${PROMPT_HOST_PART}${OPTIONAL_SPACE}\W]\[${CLEAR_COLOR}\] "
 }
 
 # XXX Pass this function down to child processes, otherwise new shells opened
