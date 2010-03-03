@@ -61,12 +61,13 @@ function __make_prompt() {
     case $TERM in
         xterm*|rxvt)
             local PROMPT_COLOR=$COLOR_GREEN
+            local WARN_COLOR=$COLOR_RED
             local CLEAR_COLOR=$COLOR_DEFAULT
             ;;
     esac
 
     if [ $RET -ne 0 ]; then
-        local FACE_PART="${COLOR_RED}:(${CLEAR_COLOR}\n"
+        local FACE_PART="${WARN_COLOR}:(${CLEAR_COLOR}\n"
     fi
 
     if [ $USER != $__NORMAL_USER ]; then
