@@ -8,19 +8,10 @@ if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
-# Determine of this is an interactive shell and run dependent commands
-case $- in
-    *i*)
-        # This is an interactive shell
-        # XXX prompt command does nothing if __make_prompt not set
-        # TODO maybe unset it on failure
-        export PROMPT_COMMAND='type __make_prompt >/dev/null 2>/dev/null && __make_prompt'
-        ;;
-    *)
-        # Do nothing as this is a non-interactive shell
-        return
-        ;;
-esac
+# Exit if this is not an interactive shell
+if [ -z "$PS1" ]; then
+    return
+fi
 
 # Aliases
 alias e='emacsclient'
@@ -82,11 +73,7 @@ function __make_prompt() {
     PS1="${FACE_PART}\[${PROMPT_COLOR}\][${PROMPT_USER_PART}${PROMPT_HOST_PART}${OPTIONAL_SPACE}\W]\[${COLOR_DEFAULT}\] "
 }
 
-# TODO if you su to a user who doesn't have this script, PROMPT_COMMAND is
-# still set but promptcmd doesn't exist because it's not inherited across
-# processes like an environment variable.  One solution would be to put the
-# prompt command in someplace globally readable and put the full path to that
-# in. Not sure how this works across networks. Probably they would overwrite
-# the prompt. Ideally, though, the prompt command would actually be embedded
-# in the environment variables so that it could actually get passed down.  I
-# think this can be done but it's super ugly.
+# XXX Pass this function down to child processes, otherwise new shells opened
+# will get the PROMPT_COMMAND but not the function necessary to make it work.
+export PROMPT_COMMAND='__make_prompt'
+export -f __make_prompt
