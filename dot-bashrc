@@ -54,7 +54,7 @@ function __make_prompt() {
 
     # Only set these colors if we are on a color terminal
     case $TERM in
-        xterm*|rxvt)
+        xterm*|rxvt|vt100)
             local PROMPT_COLOR=$COLOR_GREEN
             local WARN_COLOR=$COLOR_RED
             local CLEAR_COLOR=$COLOR_DEFAULT
