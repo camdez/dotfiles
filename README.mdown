@@ -37,4 +37,4 @@ It's your best link to the past and the closest you'll ever get to
 wielding magic.  Harness the incantations and scare the common folk.
 
 **Author:** Cameron Desautels \<<camdez@gmail.com>\>  
-**Source:** <http://github.com/hereticam/dotfiles>
+**Source:** <http://github.com/camdez/dotfiles>
