@@ -1,7 +1,7 @@
 OPTIONS=!autopickup,news,color,mail,!number_pad
 OPTIONS=showexp,showscore,time,standout,hilite_pet
 
-# display all info about character at the end, without propting
+# display all info about character at the end, without prompting
 OPTIONS=disclose:+i +a +v +g +c
 
 
