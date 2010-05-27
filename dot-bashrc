@@ -1,12 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
-fi
-
-# Exit if this is not an interactive shell
-[ -z "$PS1" ] && return
+[ -f /etc/bashrc ] && . /etc/bashrc # Source global definitions
+[ -z "$PS1" ]      && return        # Do nothing if this is not an interactive shell
 
 # Aliases
 case `uname -s` in
@@ -24,6 +19,7 @@ alias rmb='rm *~'                             # remove emacs backup files
 alias rmbr="find . -name '*~' -exec rm {} \;" # recursive version of above
 alias ssh='ssh -C'                            # enable compression
 alias e='emacsclient'
+alias o='open .'                              # open the current location in the Mac OS Finder
 
 # Configure Colors:
 export COLOR_WHITE='\033[1;37m'

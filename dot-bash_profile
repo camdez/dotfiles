@@ -1,19 +1,9 @@
 # ~/.bash_profile: executed by bash(1) each time a login shell is started.
 
-# include system-wide .profile if it exists
-if [ -f /etc/profile ]; then
-    . /etc/profile
-fi
+[ -f /etc/profile ] && . /etc/profile # include system-wide .profile if it exists
+[ -f ~/.bashrc ]    && . ~/.bashrc    # include .bashrc if it exists
 
-# include .bashrc if it exists
-if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-fi
-
-# Add ~/bin to $PATH if it exists
-if [ -d ~/bin ]; then
-    export PATH="$HOME/bin:$PATH"
-fi
+[ -d ~/bin ] && export PATH="$HOME/bin:$PATH" # Add ~/bin to $PATH if it exists
 
 # Environmental variables
 export EDITOR='emacs'
