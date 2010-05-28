@@ -14,12 +14,22 @@ case `uname -s` in
         ;;
 esac
 
+alias c='cd'
+alias l='ls'
 alias lsd='ls -F | grep \/ | sort'            # list only dirs, alphabetically
 alias rmb='rm *~'                             # remove emacs backup files
 alias rmbr="find . -name '*~' -exec rm {} \;" # recursive version of above
 alias ssh='ssh -C'                            # enable compression
 alias e='emacsclient'
 alias o='open .'                              # open the current location in the Mac OS Finder
+
+alias gs='git status'
+alias gd='git diff'
+alias gc='git commit'
+alias ga='git add'
+
+alias cs='cd ~/src/my'
+alias cn='cd ~/Writings/notes'
 
 # Configure Colors:
 export COLOR_WHITE='\033[1;37m'
