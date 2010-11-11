@@ -25,6 +25,7 @@ alias o='open .'                              # open the current location in the
 
 alias gs='git status'
 alias gd='git diff'
+alias gdc='git diff --cached'
 alias gc='git commit'
 alias ga='git add'
 alias gl='git log'
