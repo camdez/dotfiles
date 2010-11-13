@@ -18,3 +18,9 @@ export MANPATH=/opt/local/share/man:$MANPATH
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Git completion
+[ -f "$HOME/.git_completion.sh" ] && . "$HOME/.git_completion.sh"
+
+# No sad faces, even if above fails (see .bashrc)
+true
