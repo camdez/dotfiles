@@ -1,0 +1,2 @@
+--type-add=html=.haml
+--type-set=markdown=.md,.mdown,.markdown
