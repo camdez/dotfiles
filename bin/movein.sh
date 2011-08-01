@@ -33,3 +33,6 @@ bin/dotfile_install.sh dot-wgetrc
 
 # X11
 bin/dotfile_install.sh dot-Xdefaults
+
+# ack
+bin/dotfile_install.sh dot-ackrc
