@@ -5,16 +5,12 @@
 
 [ -d ~/bin ] && export PATH="$HOME/bin:$PATH" # Add ~/bin to $PATH if it exists
 
-# Environmental variables
+# Environment variables
 export EDITOR='emacs'
 export VISUAL=$EDITOR
 export PAGER='less'
 
 export GREP_OPTIONS='--color=auto'
-
-# MacPorts
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-export MANPATH=/opt/local/share/man:$MANPATH
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
