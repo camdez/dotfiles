@@ -4,6 +4,7 @@
 [ -f ~/.bashrc ]    && . ~/.bashrc    # include .bashrc if it exists
 
 [ -d ~/bin ] && export PATH="$HOME/bin:$PATH" # Add ~/bin to $PATH if it exists
+[ -d /Applications/Emacs.app/Contents/MacOS/bin ] && export PATH="/Applications/Emacs.app/Contents/MacOS/bin/:$PATH"
 
 # Environment variables
 export EDITOR='emacs'
