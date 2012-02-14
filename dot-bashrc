@@ -58,6 +58,9 @@ export COLOR_DEFAULT='\033[0m'
 # Git completion
 [ -f "$HOME/.git_completion.sh" ] && . "$HOME/.git_completion.sh"
 
+# For gist(1)
+export GITHUB_TOKEN=`security find-generic-password -gs github.token 2>&1 | egrep '^password: ' | sed 's/^password: "\(.*\)"$/\1/'`
+
 # Save these so we can check against them in later prompts
 export __NORMAL_USER=$USER
 export __NORMAL_HOST=$HOSTNAME
