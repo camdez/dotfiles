@@ -36,3 +36,6 @@ bin/dotfile_install.sh dot-Xdefaults
 
 # ack
 bin/dotfile_install.sh dot-ackrc
+
+# RSpec
+bin/dotfile_install.sh dot-rspec
