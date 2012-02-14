@@ -31,6 +31,12 @@ alias gc='git commit'
 alias ga='git add'
 alias gl='git log'
 
+alias b="bundle"
+alias be="bundle exec"
+alias bake="bundle exec rake"
+alias s="bundle exec rspec"
+alias cuc="bundle exec cucumber"
+
 alias cs='cd ~/src/my'
 alias cn='cd ~/Writings/notes'
 
