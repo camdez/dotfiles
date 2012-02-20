@@ -1,0 +1,63 @@
+# Aliases
+case `uname -s` in
+  Darwin|*BSD*)
+    alias ls='ls -G'                      # colorize `ls` output (BSD/Mac version)
+    ;;
+  *)
+    eval `dircolors -b`                   # colorize `ls` output (GNU version)
+    alias ls='ls --color=auto'
+    ;;
+esac
+
+alias c='cd'
+alias l='ls'
+alias lsd='ls -F | grep \/ | sort'            # list only dirs, alphabetically
+alias rmb='rm *~'                             # remove emacs backup files
+alias rmbr="find . -name '*~' -exec rm {} \;" # recursive version of above
+alias ssh='ssh -C'                            # enable compression
+alias gitx='gitx --all'
+alias e='emacsclient'
+alias o='open .'                              # open the current location in the Mac OS Finder
+
+alias gs='git status'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gc='git commit'
+alias ga='git add'
+alias gl='git log'
+
+alias b="bundle"
+alias be="bundle exec"
+alias bake="bundle exec rake"
+alias s="bundle exec rspec"
+alias cuc="bundle exec cucumber"
+
+alias cs='cd ~/src/my'
+alias cn='cd ~/Writings/notes'
+
+# Configure Colors
+export GREP_OPTIONS='--color=auto'
+
+export COLOR_WHITE='\033[1;37m'
+export COLOR_LIGHTGRAY='033[0;37m'
+export COLOR_GRAY='\033[1;30m'
+export COLOR_BLACK='\033[0;30m'
+export COLOR_RED='\033[0;31m'
+export COLOR_LIGHTRED='\033[1;31m'
+export COLOR_GREEN='\033[0;32m'
+export COLOR_LIGHTGREEN='\033[1;32m'
+export COLOR_BROWN='\033[0;33m'
+export COLOR_YELLOW='\033[1;33m'
+export COLOR_BLUE='\033[0;34m'
+export COLOR_LIGHTBLUE='\033[1;34m'
+export COLOR_PURPLE='\033[0;35m'
+export COLOR_PINK='\033[1;35m'
+export COLOR_CYAN='\033[0;36m'
+export COLOR_LIGHTCYAN='\033[1;36m'
+export COLOR_DEFAULT='\033[0m'
+
+# For gist(1)
+export GITHUB_TOKEN=`security find-generic-password -gs github.token 2>&1 | egrep '^password: ' | sed 's/^password: "\(.*\)"$/\1/'`
+
+# RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

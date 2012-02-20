@@ -1,0 +1,4 @@
+[ -f "$HOME/.shared_rc" ] && . "$HOME/.shared_rc"
+
+autoload -U colors && colors
+export PROMPT="%{${fg[green]}%}[%1~]%{${reset_color}%} "

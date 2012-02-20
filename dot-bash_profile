@@ -11,8 +11,5 @@ export EDITOR='emacs'
 export VISUAL=$EDITOR
 export PAGER='less'
 
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
 # No sad faces, even if above fails (see .bashrc)
 true
