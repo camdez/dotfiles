@@ -6,8 +6,8 @@
 [format]
   pretty = "%Cred%h%Creset %s"
 [alias]
-  co = checkout
   put = push origin HEAD
+  whiteout = !whiteout `git ls-files -m`
 [color]
   ui = auto
 [difftool "Kaleidoscope"]
