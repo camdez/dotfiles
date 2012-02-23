@@ -1,4 +1,19 @@
 [ -f "$HOME/.shared_rc" ] && . "$HOME/.shared_rc"
 
+[ -d ~/bin ] && export PATH="$HOME/bin:$PATH" # Add ~/bin to $PATH if it exists
+[ -d /Applications/Emacs.app/Contents/MacOS/bin ] && export PATH="/Applications/Emacs.app/Contents/MacOS/bin/:$PATH"
+
+# Environment variables
+export EDITOR='emacs'
+export VISUAL=$EDITOR
+export PAGER='less'
+
 autoload -U colors && colors
-export PROMPT="%{${fg[green]}%}[%1~]%{${reset_color}%} "
+setopt prompt_subst
+
+function _git_prompt_info() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  echo "|${ref#refs/heads/}"
+}
+
+PROMPT='%{${fg[green]}%}[%1~$(_git_prompt_info)]%{${reset_color}%} '
