@@ -8,6 +8,7 @@
 [alias]
   put = push origin HEAD
   whiteout = !whiteout `git ls-files -m`
+  x = !gitx
 [color]
   ui = auto
 [difftool "Kaleidoscope"]
