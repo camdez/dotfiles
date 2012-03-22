@@ -1,0 +1,3 @@
+[submodule "dot-emacs.d/lib/rinari"]
+	path = dot-emacs.d/lib/rinari
+	url = https://github.com/eschulte/rinari.git
