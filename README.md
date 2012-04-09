@@ -7,6 +7,13 @@ My config files for Mac OS X and Linux with a particular focus on
 Installation
 ------------
 
+```bash
+$ git clone git://github.com/camdez/dotfiles.git
+$ cd dotfiles
+$ git submodule init
+$ git submodule update
+```
+
 Included is a simple script that will symlink the config files into
 place. It'll also gently move aside any existing files instead of
 overwriting them.
@@ -14,8 +21,10 @@ overwriting them.
 If you don't want to install everything you can comment out lines in
 `bin/movein.sh`. When you're ready to install simply run:
 
-    $ cd dotfiles
-    $ bin/movein.sh
+```bash
+$ cd dotfiles
+$ bin/movein.sh
+```
 
 Configuration
 -------------
