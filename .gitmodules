@@ -13,3 +13,18 @@
 [submodule "dot-emacs.d/lib/org-mode"]
 	path = dot-emacs.d/lib/org-mode
 	url = git://orgmode.org/org-mode.git
+[submodule "dot-emacs.d/lib/haml-mode"]
+	path = dot-emacs.d/lib/haml-mode
+	url = https://github.com/nex3/haml-mode.git
+[submodule "dot-emacs.d/lib/sass-mode"]
+	path = dot-emacs.d/lib/sass-mode
+	url = https://github.com/nex3/sass-mode.git
+[submodule "dot-emacs.d/lib/yaml-mode"]
+	path = dot-emacs.d/lib/yaml-mode
+	url = https://github.com/yoshiki/yaml-mode.git
+[submodule "dot-emacs.d/lib/markdown-mode"]
+	path = dot-emacs.d/lib/markdown-mode
+	url = git://jblevins.org/git/markdown-mode.git
+[submodule "dot-emacs.d/lib/magit"]
+	path = dot-emacs.d/lib/magit
+	url = https://github.com/magit/magit.git
