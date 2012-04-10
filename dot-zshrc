@@ -1,7 +1,11 @@
 [ -f "$HOME/.shared_rc" ] && . "$HOME/.shared_rc"
 
 [ -d ~/bin ] && export PATH="$HOME/bin:$PATH" # Add ~/bin to $PATH if it exists
-[ -d /Applications/Emacs.app/Contents/MacOS/bin ] && export PATH="/Applications/Emacs.app/Contents/MacOS/bin/:$PATH"
+
+if [ -d /Applications/Emacs.app ]; then
+  export PATH="/Applications/Emacs.app/Contents/MacOS:$PATH"
+  export PATH="/Applications/Emacs.app/Contents/MacOS/bin:$PATH"
+fi
 
 # Environment variables
 export EDITOR='emacs'
