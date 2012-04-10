@@ -28,3 +28,6 @@
 [submodule "dot-emacs.d/lib/magit"]
 	path = dot-emacs.d/lib/magit
 	url = https://github.com/magit/magit.git
+[submodule "dot-emacs.d/lib/icicles"]
+	path = dot-emacs.d/lib/icicles
+	url = https://github.com/emacsmirror/icicles.git
