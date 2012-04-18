@@ -31,3 +31,6 @@
 [submodule "dot-emacs.d/lib/icicles"]
 	path = dot-emacs.d/lib/icicles
 	url = https://github.com/emacsmirror/icicles.git
+[submodule "dot-emacs.d/lib/coffee-mode"]
+	path = dot-emacs.d/lib/coffee-mode
+	url = git://github.com/defunkt/coffee-mode.git
