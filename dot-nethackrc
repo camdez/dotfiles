@@ -1,3 +1,4 @@
+# .nethackrc                                                 -*- mode: conf; -*-
 OPTIONS=!autopickup,news,color,mail,!number_pad
 OPTIONS=showexp,showscore,time,standout,hilite_pet
 
