@@ -21,3 +21,7 @@ function _git_prompt_info() {
 }
 
 PROMPT='%{${fg[green]}%}[%1~$(_git_prompt_info)]%{${reset_color}%} '
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
