@@ -10,9 +10,6 @@
 [submodule "dot-emacs.d/lib/full-ack"]
 	path = dot-emacs.d/lib/full-ack
 	url = https://github.com/nschum/full-ack.git
-[submodule "dot-emacs.d/lib/org-mode"]
-	path = dot-emacs.d/lib/org-mode
-	url = git://orgmode.org/org-mode.git
 [submodule "dot-emacs.d/lib/haml-mode"]
 	path = dot-emacs.d/lib/haml-mode
 	url = https://github.com/nex3/haml-mode.git
