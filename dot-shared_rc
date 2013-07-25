@@ -19,21 +19,28 @@ alias gitx='gitx --all'
 alias e='emacsclient'
 alias o='open .'                              # open the current location in the Mac OS Finder
 
-alias gs='git status'
+alias gs='git status -s'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias gc='git commit'
 alias ga='git add'
 alias gl='git log'
 
+# TODO name might not be great. Also consider making a git alias.
+#alias root="cd $(git rev-parse --show-toplevel)"
+
 alias b="bundle"
 alias be="bundle exec"
 alias bake="bundle exec rake"
+alias bails="bundle exec rails"
+alias g="bundle exec nice guard"
 alias s="bundle exec rspec"
 alias cuc="bundle exec cucumber"
 
 alias cs='cd ~/src/my'
 alias cn='cd ~/Writings/notes'
+
+alias down="bundle exec rake db:migrate:status | grep '^\s*down'"
 
 # Configure Colors
 export GREP_OPTIONS='--color=auto'
@@ -57,7 +64,14 @@ export COLOR_LIGHTCYAN='\033[1;36m'
 export COLOR_DEFAULT='\033[0m'
 
 # For gist(1)
-export GITHUB_TOKEN=`security find-generic-password -gs github.token 2>&1 | egrep '^password: ' | sed 's/^password: "\(.*\)"$/\1/'`
+#export GITHUB_TOKEN=`security find-generic-password -gs github.token 2>&1 | egrep '^password: ' | sed 's/^password: "\(.*\)"$/\1/'`
 
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+export RBENV_ROOT=/usr/local/var/rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# tmuxinator
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+# Local Variables:
+# mode: sh
+# End:
