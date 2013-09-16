@@ -18,6 +18,11 @@ fi
 bin/dotfile_install.sh dot-bash_profile         # a basic dotfile installation
 bin/dotfile_install.sh dot-bashrc
 
+# zsh
+bin/dotfile_install.sh dot-zshrc
+
+bin/dotfile_install.sh dot-shared_rc
+
 # emacs
 bin/dotfile_install.sh dot-emacs.d
 
@@ -28,6 +33,8 @@ bin/dotfile_install.sh dot-gitignore
 # nethack
 bin/dotfile_install.sh dot-nethackrc
 
+# tmux
+bin/dotfile_install.sh tmux.conf
 # wget
 bin/dotfile_install.sh dot-wgetrc
 
