@@ -9,6 +9,8 @@
   put = push origin HEAD
   whiteout = !whiteout `git ls-files -m`
   x = !gitx
+  conflicts = diff --name-only --diff-filter=U
+  resolve = !$EDITOR `git diff --name-only --diff-filter=U`
 [color]
   ui = auto
 [difftool "Kaleidoscope"]
