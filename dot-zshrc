@@ -3,7 +3,8 @@
 [ -d ~/bin ] && export PATH="$HOME/bin:$PATH" # Add ~/bin to $PATH if it exists
 
 # Environment variables
-export EDITOR="$HOME/bin/emacs"
+#export EDITOR="$HOME/bin/emacs"
+export EDITOR="e"
 export VISUAL=$EDITOR
 export PAGER='less'
 

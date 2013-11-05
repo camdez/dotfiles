@@ -16,7 +16,6 @@ alias rmb='rm *~'                             # remove emacs backup files
 alias rmbr="find . -name '*~' -exec rm {} \;" # recursive version of above
 alias ssh='ssh -C'                            # enable compression
 alias gitx='gitx --all'
-alias e='emacsclient'
 alias o='open .'                              # open the current location in the Mac OS Finder
 
 alias gs='git status -s'
