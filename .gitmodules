@@ -19,9 +19,6 @@
 [submodule "dot-emacs.d/lib/yaml-mode"]
 	path = dot-emacs.d/lib/yaml-mode
 	url = https://github.com/yoshiki/yaml-mode.git
-[submodule "dot-emacs.d/lib/markdown-mode"]
-	path = dot-emacs.d/lib/markdown-mode
-	url = git://jblevins.org/git/markdown-mode.git
 [submodule "dot-emacs.d/lib/icicles"]
 	path = dot-emacs.d/lib/icicles
 	url = https://github.com/emacsmirror/icicles.git
