@@ -1,27 +1,9 @@
 [submodule "dot-emacs.d/lib/rinari"]
 	path = dot-emacs.d/lib/rinari
 	url = https://github.com/eschulte/rinari.git
-[submodule "dot-emacs.d/lib/feature-mode"]
-	path = dot-emacs.d/lib/feature-mode
-	url = https://github.com/michaelklishin/cucumber.el.git
-[submodule "dot-emacs.d/lib/full-ack"]
-	path = dot-emacs.d/lib/full-ack
-	url = https://github.com/nschum/full-ack.git
-[submodule "dot-emacs.d/lib/haml-mode"]
-	path = dot-emacs.d/lib/haml-mode
-	url = https://github.com/nex3/haml-mode.git
-[submodule "dot-emacs.d/lib/sass-mode"]
-	path = dot-emacs.d/lib/sass-mode
-	url = https://github.com/nex3/sass-mode.git
-[submodule "dot-emacs.d/lib/yaml-mode"]
-	path = dot-emacs.d/lib/yaml-mode
-	url = https://github.com/yoshiki/yaml-mode.git
 [submodule "dot-emacs.d/lib/icicles"]
 	path = dot-emacs.d/lib/icicles
 	url = https://github.com/emacsmirror/icicles.git
-[submodule "dot-emacs.d/lib/coffee-mode"]
-	path = dot-emacs.d/lib/coffee-mode
-	url = git://github.com/defunkt/coffee-mode.git
 [submodule "dot-emacs.d/lib/yasnippet"]
 	path = dot-emacs.d/lib/yasnippet
 	url = https://github.com/capitaomorte/yasnippet.git
