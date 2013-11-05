@@ -1,6 +1,3 @@
-[submodule "dot-emacs.d/lib/icicles"]
-	path = dot-emacs.d/lib/icicles
-	url = https://github.com/emacsmirror/icicles.git
 [submodule "dot-emacs.d/lib/yasnippet"]
 	path = dot-emacs.d/lib/yasnippet
 	url = https://github.com/capitaomorte/yasnippet.git
