@@ -1,9 +1,6 @@
 [submodule "dot-emacs.d/lib/rinari"]
 	path = dot-emacs.d/lib/rinari
 	url = https://github.com/eschulte/rinari.git
-[submodule "dot-emacs.d/lib/clojure-mode"]
-	path = dot-emacs.d/lib/clojure-mode
-	url = https://github.com/jochu/clojure-mode.git
 [submodule "dot-emacs.d/lib/feature-mode"]
 	path = dot-emacs.d/lib/feature-mode
 	url = https://github.com/michaelklishin/cucumber.el.git
