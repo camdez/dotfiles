@@ -27,9 +27,6 @@ alias ga='git add'
 alias gl='git log'
 alias gr='cd "$(git rev-parse --show-toplevel)"'
 
-# TODO name might not be great. Also consider making a git alias.
-#alias root="cd $(git rev-parse --show-toplevel)"
-
 alias b="bundle"
 alias be="bundle exec"
 alias bake="bundle exec rake"
