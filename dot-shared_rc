@@ -16,6 +16,7 @@ alias rmb='rm *~'                             # remove emacs backup files
 alias rmbr="find . -name '*~' -exec rm {} \;" # recursive version of above
 alias ssh='ssh -C'                            # enable compression
 alias gitx='gitx --all'
+alias t="tig --all"
 alias o='open .'                              # open the current location in the Mac OS Finder
 
 alias gs='git status -s'
@@ -24,6 +25,7 @@ alias gdc='git diff --cached'
 alias gc='git commit'
 alias ga='git add'
 alias gl='git log'
+alias gr='cd "$(git rev-parse --show-toplevel)"'
 
 # TODO name might not be great. Also consider making a git alias.
 #alias root="cd $(git rev-parse --show-toplevel)"
