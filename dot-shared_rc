@@ -27,6 +27,11 @@ alias ga='git add'
 alias gl='git log'
 alias gr='cd "$(git rev-parse --show-toplevel)"'
 
+alias mw='cd ~/src/gingercube/maxrvu-web'
+alias mi='cd ~/src/gingercube/maxrvu-iphone'
+alias ow='cd ~/src/orgsync/orgsync'
+alias oi='cd ~/src/orgsync/orgsync-ios'
+
 alias b="bundle"
 alias be="bundle exec"
 alias bake="bundle exec rake"
