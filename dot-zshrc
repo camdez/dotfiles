@@ -2,6 +2,8 @@
 
 [ -d ~/bin ] && export PATH="$HOME/bin:$PATH" # Add ~/bin to $PATH if it exists
 
+export PATH="/usr/local/bin:$HOME/bin:$PATH"
+
 # Environment variables
 #export EDITOR="$HOME/bin/emacs"
 export EDITOR="e"
