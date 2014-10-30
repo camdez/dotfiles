@@ -6,7 +6,6 @@
 [alias]
   #l = log --pretty=format:\"%Cred%h%Creset %s\"
   l = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
-  put = push origin HEAD
   whiteout = !whiteout `git ls-files -m`
   x = !gitx
   conflicts = diff --name-only --diff-filter=U
