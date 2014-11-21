@@ -3,6 +3,7 @@
 [ -d ~/bin ] && export PATH="$HOME/bin:$PATH" # Add ~/bin to $PATH if it exists
 
 export PATH="/usr/local/bin:$HOME/bin:$PATH"
+export PATH="/usr/local/Cellar/cask/0.7.2/bin/:${PATH}"
 
 # Environment variables
 #export EDITOR="$HOME/bin/emacs"
