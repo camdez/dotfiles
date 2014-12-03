@@ -23,9 +23,6 @@ bin/dotfile_install.sh dot-zshrc
 
 bin/dotfile_install.sh dot-shared_rc
 
-# emacs
-bin/dotfile_install.sh dot-emacs.d
-
 # git
 bin/dotfile_install.sh dot-gitconfig
 bin/dotfile_install.sh dot-gitignore

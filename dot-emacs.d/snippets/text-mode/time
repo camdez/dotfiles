@@ -1,4 +1,0 @@
-# name: (current time)
-# key: time
-# --
-`(format-time-string "%Y-%m-%d %T")`

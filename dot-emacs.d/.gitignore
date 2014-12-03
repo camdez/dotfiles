@@ -1,6 +1,0 @@
-*.elc
-.org-id-locations
-bookmarks
-elpa
-local.el
-projectile-bookmarks.eld

@@ -1,8 +1,7 @@
 Personal Dotfile Collection
 ===========================
 
-My config files for Mac OS X and Linux with a particular focus on
-`bash` and `emacs`.
+My config files for Mac OS X and Linux.
 
 Installation
 ------------
@@ -29,8 +28,8 @@ $ bin/movein.sh
 Configuration
 -------------
 
-Make sure to edit `dot-gitconfig` and `dot-emacs` to contain your own
-name and email address instead of mine.
+Make sure to edit `dot-gitconfig` to contain your own name and email
+address instead of mine.
 
 Gibberish
 ---------
