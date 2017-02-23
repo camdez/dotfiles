@@ -73,7 +73,19 @@ export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # tmuxinator
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+# [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+# export DOCKER_HOST=tcp://10.109.20.70:2375
+export DOCKER_MEMSIZE=5
+export DOCKER_CPUS=2
+
+alias dc=docker-compose
+
+knife-ssh ()
+{
+  username=${2-cdesautels};
+  TERM=xterm-256color ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -A $username@$(knife node show $1 | awk '/IP:/ {print $2}')
+}
 
 # Local Variables:
 # mode: sh

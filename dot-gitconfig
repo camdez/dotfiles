@@ -1,6 +1,7 @@
 [user]
   name = Cameron Desautels
   email = camdez@gmail.com
+  signingkey = 242282E9
 [core]
   excludesfile = ~/.gitignore
 [alias]
