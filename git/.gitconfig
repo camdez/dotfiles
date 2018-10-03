@@ -13,12 +13,8 @@
   resolve = !$EDITOR `git diff --name-only --diff-filter=U`
 [color]
   ui = auto
-[difftool "Kaleidoscope"]
-  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [difftool]
   prompt = false
-[diff]
-  tool = Kaleidoscope
 [github]
   user = camdez
   password = !security find-generic-password -gs github.password -w | tr -d '\n'
