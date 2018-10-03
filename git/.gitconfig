@@ -22,3 +22,10 @@
   default = simple
 [fetch]
   prune = true
+
+#[includeIf "gitdir:~/src/bridgewater/"]
+#  path = ~/src/bridgewater/.gitconfig
+
+[diff "clj"]
+  xfuncname = "^(\\(.*)$"
+  wordRegex = "[-:_./*+$?%><a-zA-Z0-9]+"
