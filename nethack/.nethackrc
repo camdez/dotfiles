@@ -1,8 +1,8 @@
 # .nethackrc                                                 -*- mode: conf; -*-
 OPTIONS=!autopickup,news,color,mail,!number_pad
-OPTIONS=showexp,showscore,time,standout,hilite_pet
+OPTIONS=showexp,showscore,time,standout,hilite_pet,hilite_pile
 
 # display all info about character at the end, without prompting
 OPTIONS=disclose:+i +a +v +g +c
 
-
+OPTIONS=boulder:0
