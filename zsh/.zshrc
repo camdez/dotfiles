@@ -86,8 +86,3 @@ bindkey '^[^[[C' forward-argument
 # Local Variables:
 # mode: sh
 # End:
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-. `brew --prefix`/etc/profile.d/z.sh

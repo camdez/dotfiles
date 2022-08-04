@@ -6,3 +6,9 @@ OPTIONS=showexp,showscore,time,standout,hilite_pet,hilite_pile
 OPTIONS=disclose:+i +a +v +g +c
 
 OPTIONS=boulder:0
+
+OPTIONS=statushilites:1
+OPTIONS=hilite_status:hitpoints/down/red
+OPTIONS=hilite_status:hitpoints/up/green
+
+OPTIONS=menu_objsyms
