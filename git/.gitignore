@@ -1,7 +1,4 @@
-.DS_Store
 *~
-camdez-local
-.sass-cache
-.ensime
-.ensime_cache/
+.DS_Store
 .ctags
+camdez-local
