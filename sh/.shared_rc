@@ -15,7 +15,6 @@ alias lsd='ls -F | grep \/ | sort'            # list only dirs, alphabetically
 alias rmb='rm *~'                             # remove emacs backup files
 alias rmbr="find . -name '*~' -exec rm {} \;" # recursive version of above
 alias ssh='ssh -C'                            # enable compression
-alias gitx='gitx --all'
 alias t="tig --all"
 alias o='open .'                              # open the current location in the Mac OS Finder
 
@@ -27,23 +26,8 @@ alias ga='git add'
 alias gl='git log'
 alias gr='cd "$(git rev-parse --show-toplevel)"'
 
-alias mw='cd ~/src/gingercube/maxrvu-web'
-alias mi='cd ~/src/gingercube/maxrvu-iphone'
-alias ow='cd ~/src/orgsync/orgsync'
-alias oi='cd ~/src/orgsync/orgsync-ios'
-
-alias b="bundle"
-alias be="bundle exec"
-alias bake="bundle exec rake"
-alias bails="bundle exec rails"
-alias g="bundle exec nice guard"
-alias s="bundle exec rspec"
-alias cuc="bundle exec cucumber"
-
 alias cs='cd ~/src/my'
 alias cn='cd ~/Writings/notes'
-
-alias down="bundle exec rake db:migrate:status | grep '^\s*down'"
 
 # Configure Colors
 export GREP_OPTIONS='--color=auto'
@@ -80,12 +64,6 @@ export DOCKER_MEMSIZE=5
 export DOCKER_CPUS=2
 
 alias dc=docker-compose
-
-knife-ssh ()
-{
-  username=${2-cdesautels};
-  TERM=xterm-256color ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -A $username@$(knife node show $1 | awk '/IP:/ {print $2}')
-}
 
 # Local Variables:
 # mode: sh
