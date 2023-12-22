@@ -65,6 +65,10 @@ export DOCKER_CPUS=2
 
 alias dc=docker-compose
 
+# GPG
+# Fix "Inappropriate ioctl for device" error
+export GPG_TTY=$(tty)
+
 # Local Variables:
 # mode: sh
 # End:
