@@ -1,31 +1,57 @@
 [user]
   name = Cameron Desautels
   email = camdez@gmail.com
-  signingkey = 242282E9
+  signingkey = 4A32D989242282E9
 [core]
   excludesfile = ~/.gitignore
 [alias]
-  #l = log --pretty=format:\"%Cred%h%Creset %s\"
-  l = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
-  whiteout = !whiteout `git ls-files -m`
-  x = !gitx
   conflicts = diff --name-only --diff-filter=U
+  l = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
   resolve = !$EDITOR `git diff --name-only --diff-filter=U`
-[color]
-  ui = auto
+  whiteout = !whiteout `git ls-files -m`
+
+[branch]
+  sort = -committerdate
+[diff]
+  algorithm = histogram
+  mnemonicPrefix = true
+  renames = true
+  tool = difftastic
 [difftool]
   prompt = false
+[fetch]
+  prune = true
+[init]
+	defaultBranch = master
+[merge]
+  conflictStyle = zdiff3
+[pull]
+	ff = only
+[push]
+  default = simple
+  autoSetupRemote = true
+[rebase]
+  autosquash = true
+[tag]
+	sort = version:refname
+
+
+[difftool "difftastic"]
+  cmd = difft "$LOCAL" "$REMOTE"
 [github]
   user = camdez
   password = !security find-generic-password -gs github.password -w | tr -d '\n'
-[push]
-  default = simple
-[fetch]
-  prune = true
-
-#[includeIf "gitdir:~/src/bridgewater/"]
-#  path = ~/src/bridgewater/.gitconfig
-
 [diff "clj"]
   xfuncname = "^(\\(.*)$"
   wordRegex = "[-:_./*+$?%><a-zA-Z0-9]+"
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+# columnal output is nice!
+# diff orderfile seems cool too. Maybe put deps.edn first?
+# coloring moved lines is rad
+# EDN files should be treated similarly to Clojure files.  Also CLJC, CLJS, etc.
+# xfuncname pairs nicely with --function-context (-W), I think
