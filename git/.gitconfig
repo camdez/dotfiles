@@ -22,18 +22,18 @@
 [fetch]
   prune = true
 [init]
-	defaultBranch = master
+  defaultBranch = master
 [merge]
   conflictStyle = zdiff3
 [pull]
-	ff = only
+  ff = only
 [push]
   default = simple
   autoSetupRemote = true
 [rebase]
   autosquash = true
 [tag]
-	sort = version:refname
+  sort = version:refname
 
 
 [difftool "difftastic"]
@@ -45,10 +45,10 @@
   xfuncname = "^(\\(.*)$"
   wordRegex = "[-:_./*+$?%><a-zA-Z0-9]+"
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 
 # columnal output is nice!
 # diff orderfile seems cool too. Maybe put deps.edn first?
