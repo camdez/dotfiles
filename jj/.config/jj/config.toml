@@ -1,0 +1,20 @@
+[user]
+name = "Cameron Desautels"
+email = "camdez@gmail.com"
+
+[ui]
+default-command = "log"
+
+[revset-aliases]
+'closest_bookmark(to)' = 'heads(::to & bookmarks())'
+
+[template-aliases]
+# Relative timestamp rendered as "x days/hours/seconds ago"
+'format_timestamp(timestamp)' = 'timestamp.ago()'
+
+[aliases]
+# Don't elide commits
+l = ["log", "-r", ".."]
+
+# https://github.com/jj-vcs/jj/discussions/5568
+tug = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
