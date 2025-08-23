@@ -3,7 +3,7 @@
   email = camdez@gmail.com
   signingkey = 4A32D989242282E9
 [core]
-  excludesfile = ~/.gitignore
+  excludesFile = ~/.config/git/ignore
 [alias]
   conflicts = diff --name-only --diff-filter=U
   l = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
