@@ -3,9 +3,9 @@ all: install
 packages = ack bash git nethack rspec sh tig tmux wget X11 zsh
 
 install:
-	stow -t ${HOME} $(packages)
+	stow --verbose --target=${HOME} $(packages)
 
 clean:
-	stow -t ${HOME} -D $(packages)
+	stow --verbose --target=${HOME} --delete $(packages)
 
 .PHONY: all install clean
