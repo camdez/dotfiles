@@ -1,14 +1,12 @@
 all: install
 
-packages = ack bash git jj nethack rspec sh tig tmux wget X11 zsh
-
 install:
-	stow --verbose --target=${HOME} $(packages)
+	stow --verbose --target=${HOME} */
 
 clean:
-	stow --verbose --target=${HOME} --delete $(packages)
+	stow --verbose --target=${HOME} --delete */
 
 dryrun:
-	stow --verbose --target=${HOME} $(packages) --simulate
+	stow --verbose --target=${HOME} --simulate */
 
 .PHONY: all install clean dryrun
