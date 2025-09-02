@@ -8,4 +8,7 @@ install:
 clean:
 	stow --verbose --target=${HOME} --delete $(packages)
 
-.PHONY: all install clean
+dryrun:
+	stow --verbose --target=${HOME} $(packages) --simulate
+
+.PHONY: all install clean dryrun
