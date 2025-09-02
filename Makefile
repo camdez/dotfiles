@@ -3,10 +3,10 @@ all: install
 install:
 	stow --verbose --target=${HOME} */
 
-clean:
+uninstall:
 	stow --verbose --target=${HOME} --delete */
 
 dryrun:
 	stow --verbose --target=${HOME} --simulate */
 
-.PHONY: all install clean dryrun
+.PHONY: all install uninstall dryrun
