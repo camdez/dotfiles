@@ -10,6 +10,7 @@ case `uname -s` in
 esac
 
 alias c='cd'
+alias jw="watch -c -n 5 jj log --color=always"
 alias l='ls'
 alias lsd='ls -F | grep \/ | sort'            # list only dirs, alphabetically
 alias rmb='rm *~'                             # remove emacs backup files

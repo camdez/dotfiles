@@ -8,6 +8,20 @@ default-command = "log"
 [revset-aliases]
 'closest_bookmark(to)' = 'heads(::to & bookmarks())'
 
+# Recent commits not on trunk
+# Call these "unmerged"? 
+
+'wip30' = 'committer_date(after:"30 days ago") & trunk()..'
+'wip60' = 'committer_date(after:"60 days ago") & trunk()..'
+'wip00' = 'committer_date(after:"90 days ago") & trunk()..'
+
+# Labelled commits
+'data'  = 'description(regex:"(?i)\\[[^]]*data[^]]*\\]")'
+'expr'  = 'description(regex:"(?i)\\[[^]]*expr[^]]*\\]")'
+'stale' = 'description(regex:"(?i)\\[[^]]*stale[^]]*\\]")'
+
+'wip'   = 'wip30 ~ data ~ expr ~ stale'
+
 [template-aliases]
 # Relative timestamp rendered as "x days/hours/seconds ago"
 'format_timestamp(timestamp)' = 'timestamp.ago()'
@@ -15,6 +29,9 @@ default-command = "log"
 [aliases]
 # Don't elide commits
 l = ["log", "-r", ".."]
+
+wip = ["log", "-r", "wip"]
+rip = ["rebase", "-b", "roots(wip)", "-o", "trunk()"]
 
 # https://github.com/jj-vcs/jj/discussions/5568
 tug = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
