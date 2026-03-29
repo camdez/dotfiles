@@ -19,6 +19,9 @@ alias ssh='ssh -C'                            # enable compression
 alias t="tig --all"
 alias o='open .'                              # open the current location in the Mac OS Finder
 
+alias tb='task burndown.weekly'
+alias td='task end.after:yesterday completed'
+
 alias gs='git status -s'
 alias gd='git diff'
 alias gdc='git diff --cached'
