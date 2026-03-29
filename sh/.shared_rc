@@ -55,17 +55,17 @@ export COLOR_LIGHTCYAN='\033[1;36m'
 export COLOR_DEFAULT='\033[0m'
 
 # For gist(1)
-#export GITHUB_TOKEN=`security find-generic-password -gs github.token 2>&1 | egrep '^password: ' | sed 's/^password: "\(.*\)"$/\1/'`
+# export GITHUB_TOKEN=`security find-generic-password -gs github.token 2>&1 | egrep '^password: ' | sed 's/^password: "\(.*\)"$/\1/'`
 
-export RBENV_ROOT=/usr/local/var/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# export RBENV_ROOT=/usr/local/var/rbenv
+# if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # tmuxinator
 # [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 # export DOCKER_HOST=tcp://10.109.20.70:2375
-export DOCKER_MEMSIZE=5
-export DOCKER_CPUS=2
+# export DOCKER_MEMSIZE=5
+# export DOCKER_CPUS=2
 
 alias dc=docker-compose
 
