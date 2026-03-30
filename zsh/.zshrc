@@ -4,6 +4,7 @@
 
 export PATH="/usr/local/bin:$HOME/bin:$PATH"
 export PATH="/usr/local/Cellar/cask/0.7.2/bin:${PATH}"
+export PATH="$HOME/.local/bin:${PATH}"
 
 # Environment variables
 #export EDITOR="$HOME/bin/emacs"
