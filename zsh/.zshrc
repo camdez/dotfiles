@@ -6,6 +6,8 @@ export PATH="/usr/local/bin:$HOME/bin:$PATH"
 export PATH="/usr/local/Cellar/cask/0.7.2/bin:${PATH}"
 export PATH="$HOME/.local/bin:${PATH}"
 
+source ~/src/my/dotfiles/vendor/zsh-autoenv/autoenv.zsh
+
 # Environment variables
 export EDITOR="emacsclient -a emacs"
 export VISUAL=$EDITOR
