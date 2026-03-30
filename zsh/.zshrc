@@ -9,7 +9,7 @@ export PATH="$HOME/.local/bin:${PATH}"
 # Environment variables
 export EDITOR="emacsclient -a emacs"
 export VISUAL=$EDITOR
-export PAGER='less'
+export PAGER='less -FRX'
 
 autoload -U colors && colors
 setopt prompt_subst
