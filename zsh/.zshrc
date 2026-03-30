@@ -32,9 +32,6 @@ compinit -i
 fpath=(~/bin/zsh_functions $fpath)
 autoload -U ~/bin/zsh_functions/*(:t)
 
-autoload -Uz git-escape-magic
-git-escape-magic
-
 autoload edit-command-line
 zle -N edit-command-line
 bindkey '^Xe' edit-command-line
