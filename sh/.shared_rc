@@ -2,6 +2,7 @@
 case `uname -s` in
   Darwin|*BSD*)
     alias ls='ls -G'                      # colorize `ls` output (BSD/Mac version)
+    alias o='open .'                      # open the current location in the Mac OS Finder
     ;;
   *)
     eval `dircolors -b`                   # colorize `ls` output (GNU version)
@@ -17,7 +18,6 @@ alias rmb='rm *~'                             # remove emacs backup files
 alias rmbr="find . -name '*~' -exec rm {} \;" # recursive version of above
 alias ssh='ssh -C'                            # enable compression
 alias t="tig --all"
-alias o='open .'                              # open the current location in the Mac OS Finder
 
 alias tb='task burndown.weekly'
 alias td='task end.after:yesterday completed'
