@@ -32,7 +32,7 @@ autoload -U compinit
 compinit -i
 
 fpath=(~/bin/zsh_functions $fpath)
-autoload -U ~/bin/zsh_functions/*(:t)
+[ -d ~/bin/zsh_functions ] && autoload -U ~/bin/zsh_functions/*(:t)
 
 autoload edit-command-line
 zle -N edit-command-line
